@@ -1,16 +1,18 @@
 ---
-title: 'My personal site set up'
+title: 'My first blog'
 date: 2024-04-25
 permalink: /posts/2024/04/setup/
 tags:
   - beginner
 ---
 
-I am used to take hand-written notes
+Today I set up my blog successfully.
+
+In the past I am used to take hand-written notes
 to help me learn. 
 
-So it will
-take a few time to post them on this
+So it may
+take a lot of time to post them on this
 site. 
 
 In the future I will post my new blog
