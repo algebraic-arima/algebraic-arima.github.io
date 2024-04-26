@@ -1,6 +1,6 @@
 ---
 title: 'My personal site set up'
-date: 2024-04-26
+date: 2024-04-25
 permalink: /posts/2024/04/setup/
 tags:
   - beginner
