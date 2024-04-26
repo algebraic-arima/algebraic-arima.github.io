@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Algebraic-Arima's Blog"
+title                    : "Algebraic-Arima"
 title_separator          : "-"
-name                     : &name "Algebraic-Arima's Blog"
+name                     : &name "Algebraic-Arima"
 description              : &description "personal description"
 url                      : https://algebraic-arima.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -22,7 +22,7 @@ repository               : "algebraic-arima/algebraic-arima.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Li Fangke"
+  name             : "Li Fangke (Li Mike)"
   pronouns         : # example: "she/her"  
   bio              : "First-year undergraduate student at ACM Honor Class, SJTU"
   location         : "Shanghai, China"
@@ -77,7 +77,7 @@ author:
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
-future                   : true
+future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:

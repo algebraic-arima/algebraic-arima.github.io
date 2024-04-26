@@ -14,4 +14,3 @@ Before admitted to ACM Honor class,
 I have been studying in [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index), Shanghai 
 Jiao Tong University.
 
-

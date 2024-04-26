@@ -17,4 +17,6 @@ In the future I will post my new blog
 and in the same time repost those in my notebook.
 
 Handwriting is cool🤗
-===
+---
+
+But Poor Handwriting (PH) is not😭
