@@ -1,6 +1,7 @@
+*algebraic-arima当然要学algebra啦！！*
+
 ## 域扩张
 
-*algebraic-arima当然要学algebra啦！！*
 
 ***Lemma 1.***  $[K:F]=[K:E][E:F]$， 如果$K/E/F$是域扩张. 
 
