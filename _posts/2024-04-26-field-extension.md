@@ -1,4 +1,4 @@
-*algebraic-arima当然要学algebra啦！！*
+*天才子役arima要学algebra，所以变成了algebraic-arima*
 
 ## 域扩张
 
@@ -39,6 +39,59 @@ $\blacksquare$
 
 ***Corollary 3*** 和 ***Lemma 4*** 说明，域扩张的构造是可交换的，
 而且可以通过有限次的构造得到（?）. 
-总之，域扩张可归结为单扩域. 
+总之，域扩张可归结为单扩张. 
+
+## 单扩域
+
+$K/F$ 中至少有一个元素是超越的，则称$K/F$是**超越扩域**. 否则为**代数扩域**.
+例如，域$F$上的有理函数域$F(x)=\{\frac{f}{g}:f,g\in F[x],g\neq 0\}$是超越扩域（不存在$f$使得$f(x)=0$）.
+
+***Theorem 5.***
+$u\in K/F$, 
+
+## 正规扩域
+
+***Definition***
+$K/F$是**正规扩域**，如果对于每一个$f\in F[x]$，$f(u)=0,u\in K$, 那么$f$的所有零点都在$K$中.
+
+正规：$\mathbb{Q}[\sqrt{2}],\mathbb{Q}[i]$
+
+非正规：$\mathbb{Q}[\sqrt[3]{2}]$
+
+考虑$x^3-1$, 根为$1,\zeta,\zeta^2$
+
+$\mathbb{C}$ 是其任意子域的正规扩域.
+
+## 应用：尺规作图
+
+(0,0) 和 (0,1) 是可做出的；
+
+已作出两点$p_0,p_1$, 那么
+直线$p_0p_1$、以$p_0$为圆心
+经过$p_1$的圆是可做出的；
+
+直线和直线、圆和圆、圆和直线的交点是可做出的.
+
+每一次圆和直线（或圆和圆）相交，在域$\mathbb{Q}$
+中添加了$\sqrt{\Delta}$.
+
+则如果$p$可做出，那么$p$的坐标是$\mathbb{K}$的元素，其中
+$[K:\mathbb{Q}]=2^r$.
+
+***Corollary.*** 正n边形是可做出的当且仅当$\varphi(n)$是2的次方幂.
+
+***Proof.***
+
+$``\to"$
+
+$[\mathbb{Q}(\omega_n):\mathbb{Q}]=[\mathbb{Q}(\omega_n):\mathbb{Q}(cos\frac{2\pi}{n})][\mathbb{Q}(cos\frac{2\pi}{n}):\mathbb{Q}]$
+
+$\omega_n=e^{\frac{2\pi i}{n}}$
+是方程$x^2-2cos\frac{2\pi}{n}x+1=0$的根，故
+$[\mathbb{Q}(\omega_n):\mathbb{Q}(cos\frac{2\pi}{n})]=2$.
+
+若正n边形可做出，则$[\mathbb{Q}(cos\frac{2\pi}{n}):\mathbb{Q}]$是2的次方幂，那么$[\mathbb{Q}(\omega_n):\mathbb{Q}]$也是2的次方幂. 已知$\omega_n$是方程$x^n-1=0$的根，下面求$[\mathbb{Q}(\omega_n):\mathbb{Q}]$.
+
+分圆多项式$\Phi_n(x)=\prod_{\text{gcd}(k,n)=1}(x-e^{\frac{2k\pi i}{n}})$是$\omega_n$的极小多项式，故$[\mathbb{Q}(\omega_n):\mathbb{Q}]=\deg\Phi_n(x)=\varphi(n)$.
 
 ***Do not eat a fat man at one time***
