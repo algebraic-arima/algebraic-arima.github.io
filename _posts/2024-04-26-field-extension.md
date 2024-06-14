@@ -1,4 +1,5 @@
-*天才子役arima要学algebra，所以变成了algebraic-arima*
+
+*arima要学algebra，所以变成了algebraic-arima*
 
 ## 域扩张
 
