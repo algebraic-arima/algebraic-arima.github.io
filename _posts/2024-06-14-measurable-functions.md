@@ -1,6 +1,6 @@
 ---
 title: 'Measurable Functions'
-date: 2024-04-25
+date: 2024-06-14
 permalink: /posts/2024/06/measurable-functions/
 tags:
   - measure theory
@@ -59,3 +59,4 @@ In particular, if $f$ is bounded, then $f_n\to f$ uniformly.
 - $f_n\to f$ **a.e.** if there exists a zero-measure set $N$ s.t. $f_n(\omega)\rightarrow f(\omega)$ over $N^c$.
 - $f_n\to f$ **a.un.** if there exists a zero-measure set $N$ s.t. $f_n(\omega)\rightrightarrows f(\omega)$ over $N^c$.
 - $f_n\to f$ **in measure** if $\lim_{n\to\infty}\mu(\{|f_n(\omega)-f(\omega)|>\epsilon\})=0$ for all $\epsilon>0$.
+
