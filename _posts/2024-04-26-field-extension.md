@@ -1,4 +1,3 @@
-
 *arima要学algebra，所以变成了algebraic-arima*
 
 ## 域扩张
