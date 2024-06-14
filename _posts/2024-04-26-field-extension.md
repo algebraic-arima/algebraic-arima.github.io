@@ -1,3 +1,12 @@
+---
+title: '域扩张'
+date: 2024-04-26
+permalink: /posts/2024/04/field-extension/
+tags:
+  - algebra
+---
+
+
 *arima要学algebra，所以变成了algebraic-arima*
 
 ## 域扩张

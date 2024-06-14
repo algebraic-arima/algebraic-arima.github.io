@@ -1,3 +1,12 @@
+---
+title: 'Measurable Functions'
+date: 2024-04-25
+permalink: /posts/2024/06/measurable-functions/
+tags:
+  - measure theory
+---
+
+
 *In Axiomization of probability.*
 
 # Measurable Functions
