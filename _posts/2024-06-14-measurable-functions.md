@@ -60,15 +60,50 @@ In particular, if $f$ is bounded, then $f_n\to f$ uniformly.
 - $f_n\to f$ **a.un.** if there exists a zero-measure set $N$ s.t. $f_n(\omega)\rightrightarrows f(\omega)$ over $N^c$.
 - $f_n\to f$ **in measure** if $\lim_{n\to\infty}\mu(\{|f_n(\omega)-f(\omega)|>\epsilon\})=0$ for all $\epsilon>0$.
 
+The convergence mentioned above of measurable functions is equivalent to the extent of $\text{a.e.}$ equality. For example, if $f_n\stackrel{\mu}{\rightarrow}f$ and $f_n\stackrel{\mu}{\rightarrow}g$,
+$$[|f-g|>\epsilon]\subset\big[|f-f_k|>\frac{\epsilon}{2}\big]\cup\big[|g-f_k|>\frac{\epsilon}{2}\big]$$
+take $k\to\infty$ gives $\mu\big([|f-g|>\epsilon]\big)=0$, which implies $f=g$ a.e.
+
 ***Theorem 10.*** Let $\{f_n\}$ and $f$ be measurable functions. Then
 $f_n\stackrel{a.e.}{\rightarrow}f$ if and only if for all $\epsilon>0$, $$\mu\big(\bigcap_{n=1}^{+\infty}\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)= 0$$
 
+***Proof.*** $x\in \{f_n\to f\}$ if and only if for all $k>0$, there exists $N$ s.t. for all $n>N$, $|f_n(x)-f(x)|<\frac{1}{k}$ $\iff$ $$x\in\bigcap_{k=1}^{+\infty}\bigcup_{n=1}^{+\infty}\bigcap_{i=n}^{+\infty}[|f_i-f|<\frac{1}{k}].$$
+So $x\notin\{f_n\to f\}$ if and only if $$x\in\bigcup_{k=1}^{+\infty}\bigcap_{n=1}^{+\infty}\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\frac{1}{k}]$$
+and
+$$\mu\big(\bigcup_{k=1}^{+\infty}\bigcap_{n=1}^{+\infty}\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\frac{1}{k}]\big)=0\iff\forall k>0\;\mu\big(\bigcap_{n=1}^{+\infty}\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\frac{1}{k}]\big)=0$$
+
 ***Theorem 11.*** Let $\{f_n\}$ and $f$ be measurable functions. Then
-$f_n\stackrel{a.un.}{\rightarrow}f$ if and only if for all $\epsilon>0$, $$\lim_{n\to+\infty}\mu\big(\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)= 0$$
+$f_n\stackrel{a.un.}{\rightarrow}f$ if and only if for all $\epsilon>0$, $$\lim_{n\to+\infty}\mu\big(\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)=0$$
+
+***Proof.*** $f_n\stackrel{a.un.}{\rightarrow}f$ implies that for all $\delta>0$ there exists a set $F$
+that $\mu(F)<\delta$ s.t. $\forall\epsilon>0$, $\exists N>0$ s.t. $\forall x\in F^c$,  $\forall n>N$, $|f_n(x)-f(x)|<\epsilon$, i.e.
+$$ \forall\delta>0\;\exists F\;\mu(F)<\delta\; \text{ s.t. }  \forall\epsilon>0\;\exists n>0\;\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\subset F$$
+that is,
+$$\forall\delta>0\;\forall\epsilon>0\;\exists n>0\;\mu\big(\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)\leq\delta$$
+Applying sup limit to $n$ gives
+$$\forall\epsilon>0\;\forall\delta>0\;\overline{\lim_{n\to+\infty}}\mu\big(\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)\leq\delta$$
+and the result follows.
+
+For the other side, for all $k>0$ and $\delta>0$, there exists $n_k$ s.t. $$\mu\big(\bigcup_{i=n_k}^{+\infty}[|f_i-f|\geq\frac{1}{k}]\big)<\frac{\delta}{2^k}.$$
+Let 
+$$F=\bigcup_{k=1}^{+\infty}\bigcup_{i=n_k}^{+\infty}[|f_i-f|\geq\frac{1}{k}]$$
+and $\mu(F)<\delta$. Then 
+$$F^c=\bigcap_{k=1}^{+\infty}\bigcap_{i=n_k}^{+\infty}[|f_i-f|<\frac{1}{k}]$$
+
+Note that $n_k$ is only a function of $k$. So
+the convergence is uniform over $F^c$, and
+$f_n\stackrel{a.un.}{\rightarrow}f$.
+
 
 ***Theorem 12.*** Let $\{f_n\}$ and $f$ be measurable functions. Then
 $f_n\stackrel{\mu}{\rightarrow}f$ if and only if for all 
-subsequence $\{f_{n_k}\}$, there exists a further subsequence $\{f_{n_{k_l}}\}$ s.t. $f_{n_{k_l}}\stackrel{a.e.}{\rightarrow}f$.
+subsequence $\{f_{n_k}\}$, there exists a further subsequence $\{f_{n_{k_l}}\}$ s.t. $f_{n_{k_l}}\stackrel{a.un.}{\rightarrow}f$.
 
-***Theorem 13.*** 
+***Corollary 13.*** 
+(1) $\text{a.un.}\Rightarrow\text{a.e.}$;  $\text{a.un.}\Rightarrow\mu$
 
+(2) **(Егоров)** If $\mu(\Omega)<\infty$, then $\text{a.e.}\Rightarrow\text{a.un.}$
+
+(3) **(Riesz)** If $f_n\stackrel{\mu}{\rightarrow}f$, then there exists a subsequence $\{f_{n_k}\}$ s.t. $f_{n_k}\stackrel{a.e.}{\rightarrow}f$.
+
+***Proof.*** (2) Finite measure is upward continuous.
