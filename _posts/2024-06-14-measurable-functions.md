@@ -31,7 +31,7 @@ $\blacksquare$
 
 ***Example 4.*** Let $\{f_k(x)\}$ be a sequence of measurable functions over $\mathbb{R}^n$. Then $\{x:\lim_{k\to+\infty}f_k(x) \text{ exists}\}$ is measurable.
 
-***Proof.*** Let $E=\{x:\lim_{k\to+\infty}f_k(x) \text{ exists}\}$. Then $E=\bigcap_{m=1}^{\infty}\bigcup_{k=1}^{\infty}\bigcap_{n=k}^{\infty}\bigcap_{l=k}^{\infty}\{x:|f_n(x)-f_l(x)|<\frac{1}{m}\}$, which is measurable.
+***Proof.*** Let $E=\{x:\lim_{k\to+\infty}f_k(x) \text{ exists}\}$. Then $$E=\bigcap_{m=1}^{\infty}\bigcup_{k=1}^{\infty}\bigcap_{n=k}^{\infty}\bigcap_{l=k}^{\infty}\{x:|f_n(x)-f_l(x)|<\frac{1}{m}\}$$, which is measurable.
 $\blacksquare$
 
 ***Example 5.*** Let $\mathscr{F}$ be some collection of measurable functions. Then $\Phi(x)=\sup_{f\in\mathscr{F}} f$ and $\Psi(x)=\inf_{f\in\mathscr{F}} f$ may not be measurable.
@@ -46,7 +46,7 @@ And if all $E_i$ are measurable, then $f$ is measurable.
 
 ***Theorem 7.*** Let $f$ be a non-negative measurable function. Then there exists an increasing sequence of simple functions $\{f_n\}$ s.t. $f_n\to f$ pointwise.
 
-***Proof.*** Let $f_n(x)=\sum_{k=0}^{n2^n-1}\frac{k}{2^{n}}\chi_{\{\frac{k}{2^{n}}\leq x < \frac{k}{2^{n+1}}\}}+n\chi_{\{f\geq n\}}$. Then $f_n\to f$ pointwise.
+***Proof.*** Let $$f_n(x)=\sum_{k=0}^{n2^n-1}\frac{k}{2^{n}}\chi_{\{\frac{k}{2^{n}}\leq x < \frac{k}{2^{n+1}}\}}+n\chi_{\{f\geq n\}}$$. Then $f_n\to f$ pointwise.
 
 ***Theorem 8.*** Let $f$ be a measurable function. Then there exists a sequence of simple functions $\{f_n\}$ s.t. $|f_n(x)|<|f(x)|$ and $f_n\to f$ pointwise.
 
@@ -59,4 +59,16 @@ In particular, if $f$ is bounded, then $f_n\to f$ uniformly.
 - $f_n\to f$ **a.e.** if there exists a zero-measure set $N$ s.t. $f_n(\omega)\rightarrow f(\omega)$ over $N^c$.
 - $f_n\to f$ **a.un.** if there exists a zero-measure set $N$ s.t. $f_n(\omega)\rightrightarrows f(\omega)$ over $N^c$.
 - $f_n\to f$ **in measure** if $\lim_{n\to\infty}\mu(\{|f_n(\omega)-f(\omega)|>\epsilon\})=0$ for all $\epsilon>0$.
+
+***Theorem 10.*** Let $\{f_n\}$ and $f$ be measurable functions. Then
+$f_n\stackrel{a.e.}{\rightarrow}f$ if and only if for all $\epsilon>0$, $$\mu\big(\bigcap_{n=1}^{+\infty}\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)= 0$$
+
+***Theorem 11.*** Let $\{f_n\}$ and $f$ be measurable functions. Then
+$f_n\stackrel{a.un.}{\rightarrow}f$ if and only if for all $\epsilon>0$, $$\lim_{n\to+\infty}\mu\big(\bigcup_{i=n}^{+\infty}[|f_i-f|\geq\epsilon]\big)= 0$$
+
+***Theorem 12.*** Let $\{f_n\}$ and $f$ be measurable functions. Then
+$f_n\stackrel{\mu}{\rightarrow}f$ if and only if for all 
+subsequence $\{f_{n_k}\}$, there exists a further subsequence $\{f_{n_{k_l}}\}$ s.t. $f_{n_{k_l}}\stackrel{a.e.}{\rightarrow}f$.
+
+***Theorem 13.*** 
 
