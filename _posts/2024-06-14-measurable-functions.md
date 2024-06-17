@@ -107,3 +107,5 @@ subsequence $\{f_{n_k}\}$, there exists a further subsequence $\{f_{n_{k_l}}\}$ 
 (3) **(Riesz)** If $f_n\stackrel{\mu}{\rightarrow}f$, then there exists a subsequence $\{f_{n_k}\}$ s.t. $f_{n_k}\stackrel{a.e.}{\rightarrow}f$.
 
 ***Proof.*** (2) Finite measure is upward continuous.
+
+***Note.*** Be cautious of the difference of a.e. finite and a.e. bounded!
