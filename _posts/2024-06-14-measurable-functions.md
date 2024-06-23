@@ -109,3 +109,25 @@ subsequence $\{f_{n_k}\}$, there exists a further subsequence $\{f_{n_{k_l}}\}$ 
 ***Proof.*** (2) Finite measure is upward continuous.
 
 ***Note.*** Be cautious of the difference of a.e. finite and a.e. bounded!
+
+## An essential part: convergence in distribution
+
+***Lemma.(not verified)*** $f_n,f:\Omega\mapsto\mathbb{R}$ are measurable functions (i.e. random variables). Then
+$$f_n\stackrel{\text{d}}{\rightarrow}f\Leftrightarrow\forall a,b\in\Lambda_f,\int_{\mathbb{R}}\mathbf{1}_{[a,b)}\circ f_n\to\int_{\mathbb{R}}\mathbf{1}_{[a,b)}\circ f$$
+
+***Attempt.*** Let $F_n,F$ be the distribution functions of $f_n,f$. Then 
+$$F_n{\rightarrow}F \text{ on }\Lambda_f\Leftrightarrow\forall a,b\in\Lambda_f,F_n(b)-F_n(a)\to F(b)-F(a)$$
+$\Rightarrow$ is trivial.
+
+$\Leftarrow$: Pick $\{a_n\},b$ from $\Lambda_f$ arbitrarily s.t. $a_n\to-\infty$ as $n\to+\infty$.
+
+Then $|F_n(b)-F(b)|\leq|F_n(a_k)-F(a_k)|+|F_n(b)-F_n(a_k)+F(a_k)-F(b)|$.
+
+For every $\epsilon>0$, we pick $n=N$ large enough s.t. $|F_n(b)-F_n(a_k)+F(a_k)-F(b)|<\frac{\epsilon}{3}$,
+for such $N$, using the property of a distribution function,
+there exists $k=K$ large enough s.t. $|F_N(a_K)|<\frac{\epsilon}{3}$ and $|F(a_K)|<\frac{\epsilon}{3}$.
+
+To conclude, $|F_N(b)-F(b)|<\epsilon$, and can be arbitrarily small.
+
+The proof is deemed fake because the process of $n\to+\infty$ and 
+$k\to+\infty$ can not exchange.

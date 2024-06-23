@@ -55,8 +55,24 @@ $\blacksquare$
 $K/F$ 中至少有一个元素是超越的，则称$K/F$是**超越扩域**. 否则为**代数扩域**.
 例如，域$F$上的有理函数域$F(x)=\{\frac{f}{g}:f,g\in F[x],g\neq 0\}$是超越扩域（不存在$f$使得$f(x)=0$）.
 
+A fact: $\text{frac}(F[x])=F(x)$ where $F[x]$ is an integral domain for every field $F$. Note that
+$x$ here is merely a symbol.
+
+Similarly we have for $u\in K/F$, $\text{frac}(F[u])=F(u)$.
+
 ***Theorem 5.***
-$u\in K/F$, 
+$u\in K/F$, $F(u)=\{f(u):f\in F[x]\}$
+
+- $u$ is algebraic with minimal poly $f(x)\in F[x]$, $\deg f=n$, then $F(u)\cong F[x]/(f)$, $[F(u):F]=n$, and
+$F(u)=F[u]$;
+- $u$ is transcendental. Then $F(u)\cong F(x)$.
+
+***Sketch of Proof.*** Consider ring homomorphism $\pi:F[x]\mapsto F(u)$ with $\pi(g(x))=g(u)$. With isomorphism thm
+we have $F(u)\cong F[x]/\text{Im}\;\pi$.
+
+***Corollary 6.*** $u,v\in K/F$ are algebraic on $F$. There exists $\sigma:F(u)\cong F(v)$ where $\sigma(u)=v$, $\sigma|_F=\mathbf{Id}$ if and only if $u$ and $v$ share the same minimal polynomial.
+
+***Corollary 7.*** $u,v\in K/F$ are transcendental on $F$. There exists $\sigma:F(u)\cong F(v)$ where $\sigma(u)=v$, $\sigma|_F=\mathbf{Id}$.
 
 ## 正规扩域
 
