@@ -14,7 +14,7 @@ Thus we distinguish them, by denoting the function by $\lambda x.x^2+1$.
 
 ***Definition 1.*** Let $V$ be an infinite variable set $\{x,y,z,\dots\}$, $\Lambda$ be a set of Lambda terms.
 
-(1) If $u\in V$, then $u\in \Lambda$. 
+(1) If $u\in V$, then $u\in \Lambda$.
 
 (2)(juxtaposition for application) If $M,N\in \Lambda$, then $(M\;N)\in\Lambda$.
 
@@ -67,14 +67,13 @@ a     x
   
   (3) $FV(\lambda x.M)=FV(M)\setminus\{x\}$
 
-
 ## $\alpha$-Substitution
 
 ***Definition 5.*** $=_\alpha$, or in modulo $\alpha$, $\equiv$
 
 $x[x:=N]\equiv N$
 
-To be noticed especially, $(\lambda y.M)[x:=N]\equiv\lambda z.(M[y:=z][x:=N])$, where $z\notin FV(N)$.
+To be noticed especially, $[\lambda y.M](x:=N)\equiv\lambda z.(M[y:=z][x:=N])$, where $z\notin FV(N)$.
 
 Besides, $L[x:=M][y:=N]\equiv L[y:=N][x:=M[y:=N]]$ **when $x\notin FV(N)$**
 
@@ -150,3 +149,34 @@ $X\equiv(\lambda x.F(xx))(\lambda x.F(xx))\leftarrow_\beta \lambda y.(\lambda x.
 Thus $LF\to_\beta X\to_\beta FX\leftarrow_\beta FLF$, and $LF=_\beta FLF$.
 
 Key: Make $X$ into sth. like $X=_\beta\dots X\dots$, and let $L=\lambda u.\dots u\dots$
+
+We have $Y$-combiantor
+
+$$L\equiv\lambda f.(\lambda x.f(xx))(\lambda x.f(xx))\equiv\lambda f.(\lambda x.xx)(\lambda x.f(xx))$$
+
+, s.t. $LF=_\beta F(LF)$ is the fixed point of $F$.
+
+A demo for factorial:
+
+```cpp
+void f(int n, const std::function<int(int)> &g) {
+    cout << g(n) << endl;
+}
+
+int main() {
+    f(10, [](const auto &f) {
+        return [&](const auto &x) {
+            return x(x);
+        }([&](const auto &x) -> std::function<int(int)> {
+            return f([&](const int &n) {
+                return x(x)(n);
+            });
+        });
+    }([](const auto &f) {
+        return [=](const int &n) {
+            return n == 0 ? 1 : 2 * f(n - 1) + 3 ;
+        };
+    }));
+    return 0;
+}
+```
