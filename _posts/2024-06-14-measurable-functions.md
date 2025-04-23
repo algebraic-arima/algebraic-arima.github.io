@@ -9,8 +9,6 @@ tags:
 
 *In Axiomization of probability.*
 
-# Measurable Functions
-
 i.e. Random variables
 
 ## Notations

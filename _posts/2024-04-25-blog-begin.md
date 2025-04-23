@@ -6,7 +6,7 @@ tags:
   - beginner
 ---
 
-Today I set up my blog successfully.
+Today I set up my blog on GitHub successfully.
 
 In the past I am used to take hand-written notes
 to help me learn. 

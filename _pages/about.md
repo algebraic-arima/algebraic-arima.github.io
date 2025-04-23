@@ -7,10 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-I am a first-year undergraduate student 
+I am a second-year undergraduate student 
 at [ACM Honor Class](https://acm.sjtu.edu.cn/home), Shanghai Jiao
 Tong University.
-Before admitted to ACM Honor class,
-I have been studying in [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index), Shanghai 
+Before being admitted to ACM Honor class,
+I studied at [School of Mathematical Sciences](https://math.sjtu.edu.cn/Default/index), Shanghai 
 Jiao Tong University.
+
+I am interested in algebra, theoretical cryptography, and formal verification.
 
