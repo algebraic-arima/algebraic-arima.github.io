@@ -16,3 +16,5 @@ Jiao Tong University.
 
 I am interested in algebra, theoretical cryptography, and formal verification.
 
+Recently I learned something about TEEs and found it interesting; but I have a lot more to explore in this area.
+
