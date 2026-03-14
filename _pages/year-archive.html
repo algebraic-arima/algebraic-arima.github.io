@@ -1,19 +1,44 @@
 ---
 layout: archive
-permalink: /year-archive/
-title: "Blog posts"
+permalink: /blog/
+title: "Blog"
 author_profile: true
-redirect_from:
-  - /wordpress/blog-posts/
 ---
 
 {% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
+{% assign sorted_static_files = site.static_files | sort: "name" | reverse %}
+{% capture written_year %}None{% endcapture %}
+{% assign has_exported_posts = false %}
+
+{% for file in sorted_static_files %}
+  {% if file.extname == '.html' and file.path contains '/files/' %}
+    {% assign has_exported_posts = true %}
+    {% assign title_parts = file.basename | split: '_' %}
+    {% assign year = title_parts[0] %}
+    {% assign file_date = title_parts | slice: 0, 3 | join: '-' %}
+    {% assign display_title = title_parts | slice: 3, 99 | join: ' ' %}
+
+    {% if display_title == '' %}
+      {% assign display_title = file.basename %}
+    {% endif %}
+
+    {% if year != written_year %}
+      <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+      {% capture written_year %}{{ year }}{% endcapture %}
+    {% endif %}
+
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ base_path }}{{ file.path }}" rel="permalink">{{ display_title }}</a>
+      </h2>
+      <p class="page__date">
+        <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
+        <time datetime="{{ file_date }}">{{ file_date }}</time>
+      </p>
+    </article>
   {% endif %}
-  {% include archive-single.html %}
 {% endfor %}
+
+{% unless has_exported_posts %}
+  <p>No exported HTML posts found in <code>files/</code>.</p>
+{% endunless %}
